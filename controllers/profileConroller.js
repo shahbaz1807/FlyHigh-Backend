@@ -1,6 +1,6 @@
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
-import profileModel from "../models/ProfileModel.js";
+import profileModel from "../models/profileModel.js";
 import bcryptjs from 'bcryptjs'
 
 export const loginProfile = async (req, res) => {

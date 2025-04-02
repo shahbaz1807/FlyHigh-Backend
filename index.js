@@ -3,7 +3,7 @@ import dotenv from 'dotenv';
 import bodyParser from 'body-parser';
 import connectDB from './config/db.js';
 import notesRoute from './routes/notesRoute.js';
-// import profileRoute from './routes/profileRoute.js'
+import profileRoute from './routes/profileRoute.js'
 import cors from 'cors';
 
 dotenv.config(); 
@@ -21,7 +21,7 @@ app.get('/' , (req , res) => {
 })
 
 app.use('/api/notes' , notesRoute)
-// app.use('/api/auth' , profileRoute)
+app.use('/api/auth' , profileRoute)
 
 app.listen(port , ()=>{
     console.log(`Server is runing on port http://localhost:${port}/`);
